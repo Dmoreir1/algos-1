@@ -6,7 +6,10 @@
 
 
 def paired_parens(string):
-  pass # todo
+  if string.count('(') == string.count(')'):
+    print(True)
+  else:
+    print(False)
 
 
 
@@ -15,8 +18,10 @@ def paired_parens(string):
 
 # TEST CASES
 paired_parens("(david)((abby))") # -> True
-# paired_parens("()rose(jeff") # -> False
-# paired_parens(")(") # -> False
-# paired_parens("()") # -> True
-# paired_parens("(((potato())))") # -> True
-# paired_parens("(())(water)()") # -> True
+paired_parens("()rose(jeff") # -> False
+paired_parens(")(") # -> False
+paired_parens("()") # -> True
+paired_parens("(((potato())))") # -> True
+paired_parens("(())(water)()") # -> True
+
+

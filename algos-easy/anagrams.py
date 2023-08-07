@@ -5,8 +5,12 @@
 # Anagrams are strings that contain the same characters, but in any order.
 
 def anagrams(s1, s2):
-  pass #TODO:
-
+  s1 = sorted(s1)
+  s2 = sorted(s2)
+  if s1 == s2:
+    print("True")
+  else:
+    print("False")
 
 
 
@@ -15,12 +19,29 @@ def anagrams(s1, s2):
 
 # # TEST CASES
 anagrams('restful', 'fluster') # -> True
-# anagrams('cats', 'tocs') # -> False
-# anagrams('monkeyswrite', 'newyorktimes') # -> True
-# anagrams('paper', 'reapa') # -> False
+anagrams('cats', 'tocs') # -> False
+anagrams('monkeyswrite', 'newyorktimes') # -> True
+anagrams('paper', 'reapa') # -> False
 # anagrams('elbow', 'below') # -> True
 # anagrams('tax', 'taxi') # -> False
 # anagrams('taxi', 'tax') # -> False
 # anagrams('night', 'thing') # -> True
 # anagrams('po', 'popp') # -> False
 # anagrams('pp', 'oo') # -> False
+
+#
+# if len(s1)!= len(s2):
+#   return false
+#
+# count = {}
+# for char in s1
+#   count[char] = 1
+# else: count[char] += 1
+#
+# for char in s2
+#   if char char not in count:
+#     return False
+#   else: count[char] -= 1
+#   if count[char] < 0
+#         return False
+# return True
